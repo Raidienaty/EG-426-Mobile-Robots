@@ -5,7 +5,8 @@
 #include "Motion.h"
 #include "Encoders.h"
 
-Motion robo;
+// Robot controller
+Motion robot;
 
 int main()
 {
@@ -14,8 +15,11 @@ int main()
 
     while (true)
     {
-        robo.drive(0.5);
+        // Sets our robot to drive forward at 0.5 power
+        robot.drive(0.5);
+        // Sleep function for 10 seconds
         ThisThread::sleep_for(10s);
-        robo.stop();
+        // Stops the robot entirely
+        robot.stop();
     }
 }
